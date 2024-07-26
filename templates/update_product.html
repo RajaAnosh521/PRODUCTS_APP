@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Product</title>
+    <style>
+        body {
+            background-color: green;
+            color: black;
+        }
+        
+        .container {
+            text-align: center;
+            color: black;
+            padding-top: 90px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Update Product</h1>
+    <form method="POST">
+        <input type="text" name="image" value="{{ product.image }}" placeholder="Image URL" required>
+        <input type="text" name="name" value="{{ product.name }}" placeholder="Product Name" required>
+        <textarea name="description" placeholder="Description" required>{{ product.description }}</textarea>
+        <button type="submit">Update</button>
+    </form>
+</body>
+</html>
